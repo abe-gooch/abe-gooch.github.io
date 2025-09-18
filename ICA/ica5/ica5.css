@@ -41,10 +41,10 @@ button:hover{
     margin-top: 2rem;
     border: .25rem solid black;
 }
-.card-content:hover{
+/* .card-content:hover{
     border-color: gray;
     width:auto;
-}
+} */
 
 .details-hidden{
     transition-timing-function: ease;
