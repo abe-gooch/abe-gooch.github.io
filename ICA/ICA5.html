@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="ica5.css">
+</head>
+<body>
+    <div class="card">
+  <div class="card-header">
+    <h3>Community Garden Project</h3>
+    <button class="expand-btn" aria-label="Expand card" tabindex="0">+</button>
+  </div>
+  <div class="card-content" tabindex="0">
+    <p class="summary">Join neighbors in creating a shared growing space...</p>
+    <div class="details-hidden">
+      <p>Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
+      <p>Contact: garden@community.org</p>
+    </div>
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+    let info = false; /*bool. will use to check if button is expanded or not*/
+
+    const expandBtn = document.querySelector('.expand-btn');
+    const details = document.querySelector('.card-content');
+
+    expandBtn.addEventListener('click', showInfo); /*function call. when this, run that*/
+
+    function showInfo(){
+        console.log("showInfo");
+        // alert("alert showInfo");
+        if(info==false) {
+            details.style.display = 'flex';
+            expandBtn.textContent = '-';
+            info = true;
+        }
+        else{
+            details.style.display = 'none';
+            expandBtn.textContent = '+';
+            info = false;
+        }
+    }
+</script>
