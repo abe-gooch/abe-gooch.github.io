@@ -1,0 +1,104 @@
+/*Nav*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-nav{ /*Parent flex?*/
+    display:flex;
+    justify-content: space-between;
+    padding:2rem;
+    background-color: rgb(202, 223, 165);
+}
+.nav-brand{
+  font-size:larger;
+  font-weight: 600;
+}
+.nav-toggle{ /*Button class - hamburger*/
+    display:none; /*temp flex for testing*/
+    padding:0.5em;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    gap:0.25vw;
+
+}
+.burger-vis{ /*for three spans*/
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height:5px;
+    padding: 3%;
+    border-radius: 5%;
+}
+.nav-menu{ 
+    display:flex;
+    gap:1rem;
+}
+
+.nav-menu.show{
+    display:none;
+    flex-direction: column;
+    gap:1rem;
+    position: absolute;
+    padding:1rem;
+    background-color: rgb(202, 223, 165);
+    right:20px;
+}
+
+
+
+/*Links*/
+a{
+    text-decoration: none;
+    color: black;
+    padding:2rem;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(13, 13, 148);
+}
+.reflection_doc{
+    text-decoration: underline;
+}
+
+@media (max-width: 768px){
+    .nav-menu{ /*turn off horizontal nav*/
+        display:none; 
+        
+    }
+    .nav-menu.show{
+        display:flex;
+    }
+    .nav-toggle{ /*turn on vertical nav sidebar*/
+        display:flex;
+    }
+}
+
+/*Lists*/
+ul{
+    list-style-type: none;
+}
+li{
+    list-style-type: none;
+}
+
+#home{
+    text-align: center;
+}
+#about{
+    text-align: center;
+}
+#band-practice{
+    text-align: center;
+}
+#contact{
+    text-align: center;
+}
+
+.row{
+    display:flex;
+}
+.column{
+    flex:48%;
+    gap:2%;
+    padding:2rem;
+    margin-right: 1rem;
+}
