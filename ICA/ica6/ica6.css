@@ -1,0 +1,52 @@
+/* Current Flexbox CSS */
+/* .gallery-container { display: flex; flex-direction: column; } */
+/* .gallery-grid { display: flex; flex-wrap: wrap; gap: 1rem; } */
+/* .photo-card { flex: 1 1 300px; height: 200px; }
+.featured { flex: 1 1 100%; height: 300px; } */
+
+/*Grid Version*/
+.gallery-container{
+    display:grid;
+    grid-template-columns: 1fr 0.1fr;
+    column-gap: normal;
+    grid-template-areas:
+    "header header"
+    "nav    sidebar"
+    "main   sidebar";
+    transition: grid-template-columns 0.5s ease-in;
+}
+.gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+.gallery-header{
+    grid-area: header;
+}
+.gallery-nav{
+    grid-area: nav;
+}
+.gallery-sidebar{
+    grid-area:sidebar;
+}
+.photo-card{
+    height:200px;
+    width: 300px;
+    background-color: rgb(161, 223, 151);
+    transition: linear;
+    transition-duration: 0.5s;
+    padding:1rem;
+    gap:2rem;
+    margin-inline:2rem;
+}
+.featured{
+    grid-column: span 2;
+    height:300px;
+    width:100%;
+    margin-inline: 2rem;
+}
+
+.active-button{
+    background-color: rgba(203, 197, 197, 1);
+}
