@@ -1,0 +1,217 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body.medium-font p,
+body.medium-font li,
+body.medium-font h1,
+body.medium-font h2,
+body.medium-font h3 {
+  font-size: medium;
+}
+
+body.larger-font p,
+body.larger-font li,
+body.larger-font h1,
+body.larger-font h2,
+body.larger-font h3 {
+  font-size: larger;
+}
+
+
+/*Nav*/
+.main-nav{ /*Parent flex?*/
+    display:flex;
+    justify-content: space-between;
+    /* padding:2rem; */ /*this stems from the interior objects, so that was making it weird*/
+    background-color: #629AEA;
+}
+.nav-brand{
+  font-size:larger;
+  font-weight: 600;
+  /* height:100%; */
+}
+#banner{
+    display:block;
+    height:100%;
+    width:auto;
+}
+.nav-toggle{ /*Button class - hamburger*/
+    display:none; /*temp flex for testing*/
+    padding:0.5em;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    gap:0.25vw;
+}
+
+/*Links*/
+a{
+    text-decoration: none;
+    color: black;
+    padding:2rem;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(13, 13, 148);
+}
+
+/*Lists*/
+ul{
+    display:flex;
+    list-style-type: none;
+
+}
+li{
+    list-style-type: none;
+}
+
+#home{ text-align: center;}
+#about{ text-align: center;}
+#band-practice{ text-align: center;}
+#music{ text-align: center;}
+#FAQ{ text-align: center;}
+
+/*Home Elements*/
+.home-container{
+    display:grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: auto auto;
+    /* justify-content: center; */
+    /* border:black solid 1px; */
+
+    grid-template-areas:
+    "info calendar"
+    "info contact";
+
+    margin-inline: 16%;
+    gap:1rem;
+}
+.home-info{
+    grid-area: info;
+    border-right: lightgray dashed 1.5px;
+    padding:2rem;
+    grid-row: 1 / span 2; /*span both rows on the left*/
+}
+.home-calendar{
+    grid-area: calendar;
+    justify-self: center;
+}
+#calendar{
+    display:block;
+    justify-self: center;
+    padding:2rem;
+    /* height:30%;
+    width:auto; */
+    max-width: 80%;
+    height: auto;
+}
+.home-contact{
+    grid-area: contact;
+}
+
+/*About Elements*/
+.about-container{
+    display:grid;
+    grid-template-columns: 0.30fr 0.39fr 0.30fr;
+    grid-template-rows: auto auto;
+
+    grid-template-areas:
+        "about image uniform"
+    ;
+
+    gap:1rem;
+    padding:2rem;
+    /* margin-inline: 1rem; */
+    column-gap: 2rem;
+}
+
+.about-about{
+    grid-area:about;
+    /* grid-row: 1 / span 2; */
+    border-right: lightgray dashed 1.5px;
+    padding-right:2rem;
+}
+.about-image{
+    grid-area:image;
+    
+}
+#band-img{
+    display:block;
+    max-width:95%;
+    height:auto;
+    justify-self: center;
+}
+.joining-parent{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /*will have three buttons centered, that when clicked expand into a larger div. see sketches*/
+}
+.joining-parent button{
+    /* border: 1px solid rgba(0, 0, 0, 0.352); */
+    border-radius: 4px;
+    /* background-color: ; */
+    display: flex;
+    align-items: stretch;
+    margin-inline:2rem;
+    padding:5px;
+}
+.joining-parent button.active-button {
+    position: relative;         /* Needed so ::before is positioned relative to button */
+    border: dashed 1.5px #629AEA;
+    background-color: transparent; /* makes the weird pseudo-button below show up*/
+}
+
+.joining-parent button.active-button::before {
+    content: "";
+    position: absolute;
+    top: -0.5rem;     /* extends above the button */
+    left: -0.5rem;
+    right: -0.5rem;
+    bottom: -0.5rem;  
+    background-color: rgb(192, 224, 252); /* same as attached div */
+    border-radius: 6px;  /* rounds the corners */
+    z-index: -1;         /* puts it behind the button visually */
+}
+
+
+.member-toggle{
+    display:none;
+    align-self: center;
+    justify-self: center;
+    background-color: rgb(192, 224, 252);
+    width:100%;
+    height:15rem;
+    margin-inline: 1rem;
+}
+.member-content{
+    display:none;
+}
+#student-member{ /*id display will take priority over .member-content*/
+    display:none;
+    padding:1rem;
+}
+#performance-member{
+    display:none;
+    padding:1rem;
+}
+#competition-member{
+    display: none;
+    padding:1rem;
+}
+
+.about-uniform{
+    grid-area: uniform;
+    /* grid-row: 1 / span 2; */
+    border-left: lightgray dashed 1.5px;
+    padding-left: 2rem;
+}
+    #ul-list{
+        display:flex;
+        flex-direction: column;
+    }
+    .uniform-list{
+        list-style-type: disc; /*default*/
+    }
+
