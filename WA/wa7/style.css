@@ -1,0 +1,401 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 2.5vw, 2rem); /* min, preferred, max */
+}
+
+/*For font size updating*/
+body.medium-font p,
+body.medium-font li,
+body.medium-font h1,
+body.medium-font h2,
+body.medium-font h3 {
+  font-size: medium;
+}
+
+body.large-font p,
+body.large-font li,
+body.large-font h1,
+body.large-font h2,
+body.large-font h3 {
+  font-size: large;
+}
+
+/*Privacy/LocalStorage/Cookies-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.privacyOverlay{
+    width:100%;
+    height: 100%;
+    background-color: #c6c1c184;
+    display:block;
+    position:absolute;
+}
+
+#privacyPopup{
+    display:block;
+    position:absolute;
+    left:50%;
+    top:5%;
+    transform:translate(-50%, 50%);
+    width:35%;
+    height:25%;
+    background-color: #ffffff;
+    border: solid black 3px;
+    z-index: 1000; /*place it over all other stuff on page*/
+    padding: 2rem;
+    border-radius:5px;
+}
+#privacyButton{
+    display:block;
+    width: 7rem;
+    height:2rem;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    border-radius: 5px;
+}
+#clearCacheBtn{
+    border: solid black 1.5px;
+    border-radius: 2px;
+    display:inline-block;
+}
+#clearCacheBtn:show{
+    border: black dashed 1.5px;
+}
+
+
+/*NAV -------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.main-nav{ /*Parent flex*/
+    display:flex;
+    justify-content: space-between;
+    /* padding:2rem; */ /*this stems from the interior objects, so that was making it weird*/
+    background-color: #629AEA;
+    margin-left:auto;
+    height:3.125rem;
+    align-items: center;
+    position:relative; /*doing this so vertical nav works*/
+}
+.nav-menu{
+    margin-left:auto;
+}
+.nav-brand{
+  max-height: 100%;
+}
+#banner{
+    display:block;
+    height:100%;
+    width:auto;
+}
+/*Button class - hamburger*/
+.burgerBtn {
+  display:none;
+  align-items: center;
+  padding: 9px;
+  background: rgb(43, 44, 45);
+  border: solid gray 1.5px;
+}
+
+.burger-vis {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+.nav-vertical{
+    display:none;
+    position:absolute;
+    align-content: space-between;
+    flex-direction: column;
+    background-color: #bedffa;
+    right: 0.4em;
+    padding:0.5rem;
+    top:2.15rem;
+    border: solid 1.5px rgba(0, 0, 139, 0.267);
+    border-radius: 1px;
+}
+
+
+/*LINKS -------------------------------------------------------------------------------------------------------------------------------------------------------*/
+a{
+    text-decoration: none;
+    color: black;
+    padding:2rem;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(13, 13, 148);
+}
+
+/*LISTS -------------------------------------------------------------------------------------------------------------------------------------------------------*/
+ul{
+    display:flex;
+    list-style-type: none;
+
+}
+li{
+    list-style-type: none;
+    padding-bottom: 8px;
+}
+
+#home{ text-align: center;}
+#about{ text-align: center;}
+#band-practice{ text-align: center;}
+#music{ text-align: center;}
+#FAQ{ text-align: center;}
+
+/*HOME Elements -------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.home-container{
+    display:grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: auto auto;
+    /* justify-content: center; */
+    /* border:black solid 1px; */
+
+    grid-template-areas:
+    "info calendar";
+
+    margin-inline: 16%;
+    gap:1rem;
+}
+.home-info{
+    grid-area: info;
+    border-right: lightgray dashed 1.5px;
+    padding:2rem;
+    grid-row: 1 / span 2; /*span both rows on the left*/
+}
+.home-calendar{
+    grid-area: calendar;
+    justify-self: center;
+}
+#calendar{
+    display:block;
+    justify-self: center;
+    padding:2rem;
+    /* height:30%;
+    width:auto; */
+    max-width: 80%;
+    height: auto;
+}
+/* .home-contact{
+    grid-area: contact;
+} */
+
+#fontBtn{
+    border: solid black 1.5px;
+    border-radius: 2px;
+    display:inline-block;
+}
+#fontBtn:hover{
+    border: black dashed 1.5px;
+}
+.inline{
+    display:inline-block; 
+    margin-right:1rem;
+}
+
+/*ABOUT Elements -------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.about-container{
+    display:grid;
+    grid-template-columns: 0.30fr 0.39fr 0.30fr;
+    grid-template-rows: auto auto;
+
+    grid-template-areas:
+        "about image uniform"
+    ;
+
+    gap:1rem;
+    padding:2rem;
+    /* margin-inline: 1rem; */
+    column-gap: 2rem;
+}
+
+.about-about{
+    grid-area:about;
+    /* grid-row: 1 / span 2; */
+    border-right: lightgray dashed 1.5px;
+    padding-right:2rem;
+}
+.about-image{
+    grid-area:image;
+    
+}
+#band-img{
+    display:block;
+    max-width:95%;
+    height:auto;
+    justify-self: center;
+}
+.joining-parent{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /*will have three buttons centered, that when clicked expand into a larger div. see sketches*/
+}
+.joining-parent button{
+    /* border: 1px solid rgba(0, 0, 0, 0.352); */
+    border-radius: 4px;
+    /* background-color: ; */
+    display: flex;
+    align-items: stretch;
+    margin-inline:2rem;
+    padding:5px;
+}
+.joining-parent button.active-button {
+    position: relative;         /* Needed so ::before is positioned relative to button */
+    border: dashed 1.5px #629AEA;
+    background-color: transparent; /* makes the weird pseudo-button below show up*/
+}
+
+.joining-parent button.active-button::before {
+    content: "";
+    position: absolute;
+    top: -0.5rem;     /* extends above the button */
+    left: -0.5rem;
+    right: -0.5rem;
+    bottom: -0.5rem;  
+    background-color: rgb(192, 224, 252); /* same as attached div */
+    border-radius: 6px;  /* rounds the corners */
+    z-index: -1;         /* puts it behind the button visually */
+}
+
+
+.member-toggle{
+    display:none;
+    align-self: center;
+    justify-self: center;
+    background-color: rgb(192, 224, 252);
+    width:100%;
+    height:15rem;
+    margin-inline: 1rem;
+    padding:1rem;
+}
+.member-content{
+    display:none;
+}
+
+.about-uniform{
+    grid-area: uniform;
+    /* grid-row: 1 / span 2; */
+    border-left: lightgray dashed 1.5px;
+    padding-left: 2rem;
+}
+    #ul-list{
+        display:flex;
+        flex-direction: column;
+    }
+    .uniform-list{
+        list-style-type: disc; /*default*/
+    }
+
+
+/*Responsive -------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*all the "It should be visible at this size" happens in CSS using media*/
+    /*Media queries go at bottom of the file*/
+
+/* Phone */
+@media only screen and (max-width: 600px) {
+    /*NAVIGATION*/
+    .nav-menu{
+        display:none;
+    }   
+    .burgerBtn{
+        display:block;
+    }
+
+    /*HOME*/
+    .home-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "info"
+        "calendar";
+    margin-inline: 5%;
+    }
+    .home-info {
+    border-right: none; 
+    grid-row: auto; /*fixes it forcing span*/
+    }
+
+    /*ABOUT*/
+    .about-container{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "about"
+        "image"
+        "uniform";
+    }
+    .about-about{   
+    border-right: none;
+    grid-row:auto;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+    /*NAVIGATION*/
+    .nav-menu{
+        display:none;
+    }  
+    .burgerBtn{
+        display:block;
+    }
+
+    /*HOME*/
+    .home-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "info" 
+        "calendar";
+    margin-inline: 10%;
+    }
+    .home-info {
+    border-right: none;       
+    grid-row: auto; /*fixes it forcing span*/
+    }
+    /*ABOUT*/
+    .about-container{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "about"
+        "image"
+        "uniform";
+    }
+
+    .about-about {
+    grid-area: about;
+    border-right: none;
+    grid-row: auto;
+    }
+
+    .about-image {
+    grid-area: image;
+    }
+
+    .about-uniform {
+    grid-area: uniform;
+    border-left: none;
+    padding-left: 0;
+    padding-top: 1rem;
+    }
+    
+}
+
+/* Desktop+ */
+@media only screen and (min-width: 992px) {
+  .home-container {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "info calendar";
+    margin-inline: 16%;
+    gap: 1rem;
+  }
+  .home-info {
+    grid-row: auto; /* prevent forced spanning */
+  }
+}
