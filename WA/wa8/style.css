@@ -137,11 +137,11 @@ li{
     padding-bottom: 8px;
 }
 
-#home{ text-align: center;}
-#about{ text-align: center;}
-#band-practice{ text-align: center;}
-#music{ text-align: center;}
-#FAQ{ text-align: center;}
+.home{ text-align: center;}
+.about{ text-align: center;}
+.band-practice{ text-align: center;}
+.music{ text-align: center;}
+.FAQ{ text-align: center;}
 
 /*HOME Elements -------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .home-container{
