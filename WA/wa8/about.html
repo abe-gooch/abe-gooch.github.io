@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-brand"><img id="banner" src="../../img/nccpbBanner.png" alt="Northern Colorado Caledonia Pipe Band Logo Banner"></div>
+        <ul class="nav-menu">
+            <li><a href="main.html" id="home">Home</a></li>
+            <li><a href="" id="#about">About</a></li>
+            <li><a href="" id="band-practice">Band Practice</a></li>
+            <li><a href="" id="music">Music</a></li>
+            <li><a href="" id=faq>FAQ</a></li>
+        </ul>
+        <button class="burgerBtn" aria-label="Toggle navigation menu">
+            <span class="burger-vis"></span>
+            <span class="burger-vis"></span>
+            <span class="burger-vis"></span>
+        </button>
+    </nav>
+    <ul class="nav-vertical">
+            <li><a id="#home">Home</a></li>
+            <li><a href="about.html" id="about">About</a></li>
+            <li><a href="band-practice.html" id="band-practice">Band Practice</a></li>
+            <li><a href="music.html" id="music">Music</a></li>
+            <li><a href="faq.html" id=faq>FAQ</a></li>
+    </ul>
+    <main class="about-container">
+        <div class="about-about">
+            <h2 class="inline"><strong>About the Band</strong></h2>
+            <button id="fontBtn">Change Font Size</button>
+            <p>The Northern Colorado Caledonia Pipe Band was formed in 1981, then called "Fort Collins Pipe Band", with financial support from the McCreery family of Loveland, Colorado. The band is both a <strong>performance </strong>and a<strong> competition pipe band</strong>.</p>
+            <p>The band performs in a variety of Northern Colorado venues every year including University of Colorado Boulder’s Commencement, Front Range Community College’s Commencement, St. Patrick’s Parades in both Greeley and Fort Collins with performances at local businesses, Pub performances on St. Patrick’s day in Longmont, Kirkin’ of Tartans in Boulder and Longmont, and Jingle Ale at Coopersmith’s in Fort Collins.  In addition to the <strong>annual events</strong> the band has performed at a number of <strong>local events</strong> including the Estes Tattoo, St. Andrews Society Gala, Diana Gabaldon’s visit to UNC, Kilts and Celts with the Greeley Chorale, and <strong>can be booked</strong> for weddings, private parties and events.</p>
+            <p>NCCPB competes at the four WUSPBA sanctioned games in Colorado, as well as often <strong>traveling to compete</strong> and in nearby states, and occasionally traveling to California and Canada for competitions.  The band has achieved numerous local championships and were the WUSPBA aggregate champions in 2011!</p>
+        </div>
+        <div class="about-image">
+            <img src="../../img/aboutTheBand.jpg" alt="18 members of the NCCPB pose in performance dress" id="band-img">
+            <h3><strong>Joining the Band</strong></h3>
+            <div class="joining-parent">
+                <button data-target="student-member">Student Member ▼</button>
+                <button data-target="performance-member">Performance Member ▼</button>
+                <button data-target="competition-member">Competition Member ▼</button>
+            </div>
+            <div class="member-toggle">
+                <p></p>
+                <div id="student-member" class="member-content">
+                    <p><strong>Student Member:</strong> The NCCPB welcomes all newcomers, both drummers and pipers, as student members of the band. Student members study basic rudiments and tunes until they are ready to perform all of the band’s performance tunes.  When the Pipe Major, Pipe Sergeant and Drum Sergeant determine a student member has memorized and correctly  plays all of the band’s performance music the candidate is accepted as a member of the performance band.</p>
+                </div>
+                <div id="performance-member" class="member-content">
+                    <p><strong>Performance Member:</strong> Once admitted as a performance member of the band, the piper or drummer participates in public performances.</p>
+                </div>
+                <div id="competition-member" class="member-content">
+                    <p><strong>Competition Member:</strong> Performance members who would like to play in competitions inform the Pipe Major or Leading Drummer of their wish. The Pipe Major and Leading Drummer determine if pipers and drummers meet the required standard. Playing in any one competition does not necessarily mean that a piper or drummer plays in all competitive events of the season. The Pipe Major or Leading Drummer may stipulate that a player stand down on the day or for a particular event. However, being stood down on any one day does not preclude a piper or drummer from playing in future competitions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-uniform">
+            <h3><strong>Uniform</strong></h3>
+            <p>Worn for both performances and competitions, the NCCPB uniform consists of the following items:</p>
+            <ul id="ul-list">
+                <li class="uniform-list">Black glengarry</li>
+                <li class="uniform-list">Glengarry badge</li>
+                <li class="uniform-list">White oxford shirt *</li>
+                <li class="uniform-list">Band tie</li>
+                <li class="uniform-list">Black vest</li>
+                <li class="uniform-list">Black rain cape</li>
+                <li class="uniform-list">Waist belt</li>
+                <li class="uniform-list">Colorado tartan kilt</li>
+                <li class="uniform-list">Black sporran</li>
+                <li class="uniform-list">Black hose *</li>
+                <li class="uniform-list">Red hose flashes</li>
+                <li class="uniform-list">Black ghillie brogues *</li>
+                <li class="uniform-list">Black Jacket</li>
+            </ul>
+            <p><i>* The cost of these items must be covered by the band member. Hose and shirts can be purchased from the band Quartermaster. Brogues can be purchased from a supplier of highland wear for approximately $100-200 (US).</i></p>
+            <p>Note: A uniform deposit is required for band-owned items. This deposit may be redeemed in full if the items are returned to the Quartermaster in good condition.</p>
+        </div>
+    </main>
+    <script src="about.js" defer></script>
+</body>
