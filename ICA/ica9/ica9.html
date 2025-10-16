@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball{
+            border-radius: 100%;
+            border:3px solid rgba(128, 128, 128, 0.342);
+            background-color: orange;
+            width:80px;
+            height:80px;
+            animation-name: bounce;
+            animation-duration: 2.5s;
+            animation-timing-function:linear;
+            animation-iteration-count: infinite;
+            position:relative;
+        }
+        @keyframes bounce{
+           from{ /*will squish slightly, bounce up and down, squish a lot, then return to normal*/
+            /* top:500px; */
+            /* left:50%; */
+            top:50%;
+            background-color:yellow;
+           }
+
+           10%{
+            height:70px;
+            width:90px;
+            /* top:500px; */
+            /* left:50%; */
+            top:50%;
+           }
+
+           25%{
+            width:80px;
+            height:80px;
+            /* top:500px; */
+            /* left:50%; */
+            top:47%;
+            background-color: orange;
+           }
+           40%{
+            width:75px;
+            height:85px;
+            top:40%;
+            /* top:450px; */
+            /* left:50%; */
+           }
+
+           60%{
+            width:70px;
+            height:90px;
+            top:30%;
+            /* top:400px; */
+            /* left:50%; */
+            background-color: yellow;
+           }
+
+           80%{
+            width:75px;
+            height:85px;
+            top:42%;
+            /* top:450px; */
+            /* left:50%; */
+           }
+           to{
+            width:80px;
+            height:80px;
+            top:50%;
+            /* top:500px; */
+            /* left:50%; */
+            background-color:yellow;
+           }
+        }
+
+        .center{
+            display:flex;
+            position:absolute;
+            left:33%;
+            width:500px;
+            height:500px;
+            align-content: center;
+            justify-content: center;
+        }
+        .absolute{
+            position:absolute;
+            top:10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1 class="absolute">Please wait.</h1>
+        <div class="ball"></div>
+    </div>
+    <script>
+    </script>
+</body>

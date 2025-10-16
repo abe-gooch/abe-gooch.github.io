@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box {
+            background-color: red;
+            height:200px;
+            width:200px;
+            border:5px black solid;
+
+            animation-name:moving-box;
+            animation-duration: 4s; /*it will take 4 seconds to complete*/
+            /* animation-iteration-count: infinite; it will loop forever */
+            /* animation-timing-function: ease-out; */
+
+            /* position:relative; it is absolute by default I think, which prevents the animation from playing */
+        /* } */
+
+        .another-box {
+            background-color: blue;
+            height:200px;
+            width:200px;
+            border:5px black solid;
+            transition-property: width height; /*any property that you can normally work with*/
+            transition-duration:1s;
+            transition-timing-function: linear;
+        }
+        .another-box:hover{
+            width:500px;
+            height:500px;
+        }
+
+        /*make keyframes rule. match name to animation-name*/
+        /*it tweens these automatically, ease-in-out by default*/
+        @keyframes moving-box {
+            from { /*0% - start point*/
+                left:0px;
+                top:0px;
+                background-color: red;
+            }
+
+            25% {
+                left:500px;
+                top:0px;
+                background-color: blue;
+            }
+
+            50% {
+                left:500px;
+                top:500px;
+                background-color: yellow;
+            }
+
+            75% {
+                left:0px;
+                top:500px;
+                background-color: green;
+            }
+
+            to { /*100% - end point*/
+                left:0px;
+                top:0px;
+            }
+        } /*to prevent jumpiness, if you are changing one element, define it in other keyframes too*/
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <div class="another-box">
+
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>
