@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <!--This used to be a quote generator, but assignment changed-->
+  <div class="content">
+    <div><img id="logotype" src="../../img/pokemon_logotype.jpg" alt="Pokemon logotype"></div>
+      <div class="app">
+          <header>Random PokeGenerator</header>
+          <section class="quotes">
+            <!--Image of pokemon | Default Pikachu-->
+            <img class="poke-image" 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif" 
+              id="js-quote-text" 
+              alt="picture of a random Pokemon">
+            <!--Name of Pokemon-->
+            <div class="quote-text" id="js-answer-text">
+            </div>
+          </section>
+          <section class="controls" >
+            <button type="button" id="js-new-quote" class="new-quote">
+              Show a new Pokemon!
+            </button>
+            <button type="button" id="js-tweet" class="twitter">
+              Who's that Pokemon?
+            </button>
+          </section>
+        </div>
+      </div>
+    </div>
+      <script src="wa10.js" defer></script>
+</body>
+</html>

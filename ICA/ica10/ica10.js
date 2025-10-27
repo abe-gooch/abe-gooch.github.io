@@ -21,7 +21,7 @@ async function newTrivia(){ //when using await, you must add async
             throw Error(response.statusText) // prints an error statement into console
         }
         const json = await response.json();
-        // console.log(json);
+        console.log(json);
         displayTrivia(json["question"]);
 
         //update the tracking variable
@@ -50,4 +50,4 @@ function newAnswer(){
 }
 
 
-newTrivia() // runs newTrivia at the end of JS loading, to populate trivia
+newTrivia(); // runs newTrivia at the end of JS loading, to populate trivia
