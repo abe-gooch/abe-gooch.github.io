@@ -37,6 +37,10 @@ header {
     border-bottom: 1px solid #ebebeb;
 }
 
+p {
+    padding:10px;
+}
+
 .quotes { /*div for image*/
     min-height: 200px;
     display: flex;
