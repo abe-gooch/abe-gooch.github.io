@@ -1,4 +1,5 @@
-let newPokeBtn = document.querySelector("#js-new-quote").addEventListener('click', newPokemon);
+let newPokeBtn = document.querySelector("#js-new-quote");
+newPokeBtn.addEventListener('click', newPokemon);
 let answerBtn= document.querySelector('#js-tweet');
 answerBtn.addEventListener('click', displayAnswer)
 
