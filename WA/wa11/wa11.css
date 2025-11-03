@@ -1,0 +1,30 @@
+
+/*REFERENCE*/
+.buffer { /*this aint working*/
+  padding:15px;
+  width:50%;
+  height:100%;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+#saveBtn{
+    background-color: #deb522;
+    border-radius: 2px;
+    border: 1px solid black;
+    padding:0.5rem;
+}
+#saveBtn:hover{
+    background-color:#c19e1e;
+}
+#library{
+    top:50%;
+    transform: 50;
+}
+
+/* .invisible {
+  visibility: hidden;
+} */

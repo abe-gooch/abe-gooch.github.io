@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wa11.css">
+</head>
+<body>
+    <div class="buffer">
+        <div>
+            <label class="control-label">Title:</label> <!--label put it inline-->
+            <input type="text" id="searchBar" name="t" class="input-small">
+            &nbsp;&nbsp; <!--These are essentially just spaces, but it makes sure there isn't a line break as well-->
+            <button id="searchBtn">Search</button>
+            &nbsp;&nbsp;
+        </div>
+        <div class="hide" id="responseDiv">
+            <h3><br>Response:</h3>
+            <pre id="response-text"></pre> <!--pre helps with formatting, and makes \n work-->
+            <button id="saveBtn">Save Movie</button>
+        </div>
+        <div class="hide" id="library">
+            <p>Saved Movie Library:</p>
+            <pre id="movie-list"></pre>
+        </div>
+    </div>
+    <script src="wa11.js" defer></script>
+</body>
+</html>
