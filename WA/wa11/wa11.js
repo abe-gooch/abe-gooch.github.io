@@ -24,7 +24,7 @@ searchBtn.addEventListener('click', async() => {
 /*FETCHING API REQUEST*/
 async function fetchMovie(title){
     try{
-        const movieData = await fetch(`http://www.omdbapi.com/?t=${title}&apikey=88c5e803`);
+        const movieData = await fetch(`https://www.omdbapi.com/?t=${title}&apikey=88c5e803`);
         if(!movieData.ok || title==""){
             responseText.textContent = "";
             throw Error(movieData.statusText) // prints an error statement into console
