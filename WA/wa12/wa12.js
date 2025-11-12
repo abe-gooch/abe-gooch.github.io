@@ -54,11 +54,11 @@ async function fetchMovie(title){
             let cardTitle = document.querySelector(".cardTitle");
                 cardTitle.textContent = current.title;
             let infoReleased = document.querySelector(".released");
-                infoReleased.textContent= `Released: ${current.released}`;            
+                infoReleased.textContent= `Released:  ${current.released}`;            
             let infoRated = document.querySelector(".rated");
-                infoRated.textContent = `Rated: ${current.rated}`
+                infoRated.textContent = `Rated:  ${current.rated}`
             let infoPlot = document.querySelector(".plot");
-                infoPlot.textContent = `Plot: ${current.plot}`
+                infoPlot.textContent = `Plot:  ${current.plot}`
 
             console.log('card updated')
         }
