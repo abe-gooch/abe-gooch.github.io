@@ -7,8 +7,10 @@ let current ={
     rated:"",
     released:"",
     plot:"",
+    poster:"",
 }
 let responseText = document.querySelector('#response-text');
+let responseCard = document.querySelector('#responseCard');
 let saveBtn = document.querySelector('#saveBtn');
 
 let searchBtn = document.querySelector('#searchBtn');
@@ -26,24 +28,39 @@ async function fetchMovie(title){
     try{
         const movieData = await fetch(`https://www.omdbapi.com/?t=${title}&apikey=88c5e803`);
         if(!movieData.ok || title==""){
-            responseText.textContent = "";
+            responseText.textContent = "Movie not found.";
             throw Error(movieData.statusText) // prints an error statement into console
         }
         const json = await movieData.json();
-        let responseDiv = document.querySelector('#responseDiv');
-            responseDiv.classList.remove('hide');
-            responseDiv.classList.add('show');
         console.log('JSON:');
         console.log(json)
         if(json["Response"]=="False"){
             responseText.textContent = "Movie not found.";
         }
         else{
+        //make the card visible
+            responseCard.style.display = "grid";
+
             current.title = json["Title"];
             current.rated=json["Rated"];
             current.released=json["Released"];
             current.plot=json["Plot"];
-            responseText.textContent = `Title: ${current.title} \nReleased: ${current.released} \nRated: ${current.rated} \nPlot: ${current.plot}`;
+            current.poster=json["Poster"]
+
+            console.log('current updated')
+            //update the movie card
+            let poster = document.querySelector(".poster");
+              poster.src=current.poster;
+            let cardTitle = document.querySelector("#cardTitle");
+                cardTitle.textContent = current.title;
+            let infoReleased = document.querySelector(".released");
+                infoReleased.textContent= `Released: ${current.released}`;            
+            let infoRated = document.querySelector(".rated");
+                infoRated.textContent = `Rated: ${current.rated}`
+            let infoPlot = document.querySelector(".plot");
+                infoPlot.textContent = `Plot: ${current.plot}`
+
+            console.log('card updated')
         }
     }
     catch(err){
