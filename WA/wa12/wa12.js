@@ -51,7 +51,7 @@ async function fetchMovie(title){
             //update the movie card
             let poster = document.querySelector(".poster");
               poster.src=current.poster;
-            let cardTitle = document.querySelector("#cardTitle");
+            let cardTitle = document.querySelector(".cardTitle");
                 cardTitle.textContent = current.title;
             let infoReleased = document.querySelector(".released");
                 infoReleased.textContent= `Released: ${current.released}`;            
