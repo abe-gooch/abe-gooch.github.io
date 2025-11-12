@@ -13,6 +13,7 @@ body{
 } */
 
 h1{
+  font-size: larger;
   justify-self: center;
   color: #deb522;
 }
