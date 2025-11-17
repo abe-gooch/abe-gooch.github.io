@@ -1,0 +1,150 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 2.5vw, 2rem); /* min, preferred, max */
+  background: black;
+  color: white;
+}
+
+/* .hide {
+  display: none;
+}
+.show {
+  display: block !important;
+} */
+
+h1{
+  font-size: larger;
+  justify-self: center;
+  color: #deb522;
+}
+
+h2{
+  font-size: 0.95rem;
+  text-decoration: none;
+  display:none;
+}
+
+h3{
+  font-size: 1rem;;
+  display:none;
+}
+
+label{
+  font-size: 1rem;
+}
+
+
+.page-container{
+  display:grid;
+  grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  grid-template-rows: auto auto;
+
+  grid-template-areas: 
+  "left-sidebar content right-sidebar";
+}
+
+.left-sidebar{
+  grid-area: sidebar;
+} 
+.right-sidebar{
+  grid-area: sidebar;
+} 
+
+.content{
+  grid-area: content;
+  height: 100%;
+}
+
+
+#searchBtn{
+  background-color: #074559;
+  border-radius: 5px;
+  border:white;
+  color:white;
+  padding:6px;
+}
+#searchBtn:hover{
+  background-color: #0d6481;
+}
+
+#saveBtn{
+  background-color: #074559;
+  border-radius: 5px;
+  border:white;
+  color:white;
+  padding:6px;
+  display:none;
+}
+#saveBtn:hover{
+  background-color: #0d6481;
+}
+
+
+.movieCard{
+  background-color: rgb(31, 30, 30);
+  color:white;
+  border-radius: 15px;
+  height:auto;
+  width:25rem;
+  margin-bottom: 0.25em;
+
+  display:none;
+  grid-template-columns: 0.3fr 0.65fr 0.05fr;
+  grid-template-rows: auto auto;
+
+  grid-template-areas: 
+  "poster info x";
+}
+
+.poster{
+  grid-area: poster;
+  margin:1rem;
+  background-color: white;
+  border:white solid 1px;
+  max-width: 100%;
+  display:grid;
+  margin-top: 40%;
+}
+
+.info{
+  grid-area: info;
+  margin-left:2.5rem;
+  height:100%;
+  display:grid;
+  margin-right: 1rem;
+}
+.info p{
+  font-size: medium;
+  display: inline;
+  margin:3px;
+  overflow-wrap: break-word;
+}
+
+.x{
+  grid-area: x;
+  margin-top:20px;
+  margin-right:10px;
+  background-color: rgb(31, 30, 30);
+  color:white;
+  border:none;
+  height:20px;
+  font-size: large;
+}
+
+.x:hover{
+  color:#deb522;
+}
+
+.cardTitle{
+  font-size: large;
+}
+
+.movieLibrary{
+  display:none;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+#response-text{
+  font-size:large;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wa13.css">
+</head>
+<body>
+    <main class="page-container">
+        <div class="sidebar"></div>
+        <section class="content">
+            <h1>Movie Title Finder</h1>
+            <label class="control-label">Input title:</label> <!--label put it inline-->
+            <input type="text" id="searchBar" name="t" class="input-small">
+            &nbsp;&nbsp; <!--These are essentially just spaces, but it makes sure there isn't a line break as well-->
+            <button id="searchBtn">Search</button>
+            &nbsp;&nbsp;
+
+            <pre id="response-text"></pre>
+            <h2 id="resultTitle"><br>Result:</h2>
+            <div class="movieCard" id="responseCard">
+                <img src="null" class="poster" alt="movie-poster">
+                <div class="info">
+                    <br>
+                    <p class="cardTitle">Title</p>
+                    
+                    <p class="released">Released:</p>
+                    <p class="rated">Rated:</p>
+                    <p class="plot">Plot:</p>
+                    <br>
+                </div>
+                <!-- <button class="x">x</button> -->
+            </div>
+            <button id="saveBtn">Save Movie</button>
+        <h3 id="libraryTitle"><br>Your Movie Library</h3>
+        <div class="movieLibrary">
+            <!-- <div class="movieCard"> -->
+                    <!-- <img src="null" class="poster" alt="movie-poster">
+                    <div class="info">
+                        <br>
+                        <p class="cardTitle">Title</p>
+                        
+                        <p>Released:</p>
+                        <p>Rated:</p>
+                        <p>Plot:</p>
+                        <p></p>
+                        <br>
+                    </div>
+                    <button class="x">x</button> -->
+            <!-- </div> -->
+
+            
+        </div>
+        </section>
+        <div class="sidebar"></div>
+    </main>
+    <script src="wa13.js" defer></script>
+</body>
+</html>
